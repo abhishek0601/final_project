@@ -11,6 +11,14 @@
       <%= form.email_field :email, class: "Form-input"%>
     </div>
     <div class="Form-section">
+      <p class="FormInput-label">Phone Number:</p>
+      <%= form.telephone_field :phone_number, class: "Form-input"%>
+    </div>
+    <div class="Form-section">
+      <p class="FormInput-label">Address:</p>
+      <%= form.text_area :address, class: "Form-input"%>
+    </div>
+    <div class="Form-section">
       <p class="FormInput-label">Password:</p>
       <%= form.password_field :password, class: "Form-input" %>
     </div>

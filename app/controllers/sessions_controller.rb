@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user and user.authenticate(params[:password])
       flash[:success] = "Logged-in Succesfully"
       session[:current_user_id] = user.id
-      redirect_to "/"
+      redirect_to new_users_home_path
     else
       flash[:error] = "Your Login attempt was invalid.Please Retry"
       redirect_to new_sessions_path

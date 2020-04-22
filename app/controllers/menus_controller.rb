@@ -1,6 +1,8 @@
 class MenusController < ApplicationController
-  def index
-    render "index"
+  before_action :ensure_user_logged_in
+
+  def new
+    render "new"
   end
 
   def create

@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   get "/" => "home#index"
 
   resources :users
+  resources :orders
+
+  get "/menus" => "menus#new", as: :menus
 
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
   delete "/signout" => "sessions#destroy", as: :destroy_session
+  get "/home" => "users#home", as: :new_users_home
 end

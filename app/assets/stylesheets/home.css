@@ -30,3 +30,27 @@
   margin-bottom: 20px;
   font-size: 16px;
 }
+
+.Navigation {
+  overflow: hidden;
+  background-color:blue;
+}
+
+.Navigation a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.Navigation a:hover {
+  background-color: black;
+  color: skyblue;
+}
+
+.Navigation a.active {
+  background-color: #4CAF50;
+  color:blue;
+}
