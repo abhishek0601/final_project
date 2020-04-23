@@ -24,3 +24,34 @@
   border: 0;
   border-radius: 8px;
 }
+
+.Users-label{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.User{
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgb(27, 37, 37);
+  margin-left: 20px;
+}
+
+.User-container{
+  display: inline-flex;
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.User-name{
+
+}
+
+.User-delete{
+  visibility: hidden;
+  margin-left: 8px;
+}
+
+.User-container:hover .User-delete{
+  visibility:visible;
+}

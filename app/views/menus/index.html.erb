@@ -1,0 +1,29 @@
+<h1 class="Menus-title">Menus</h1>
+<%= form_with(url: "/menus", method: "post", class: "Menus") do %>
+  <p class="Menus-label">Add a Menu:</p>
+    <%= text_field_tag 'name', '' , placeholder: "Add-Menu", class: 'Menus-name'
+    %>
+  <%= button_tag("Add-Menu",type: "submit",class: "Menus-button") %>
+<% end %>
+<h2>Menus-List</h2>
+<ul>
+    <% Menu.all.each do |menu| %>
+        <li class="Menus-view">
+          <div class="Menus-container">
+            <%= form_with(url: "/menus/#{menu.id}" , method: "put") do %>
+              <%= check_box_tag("",
+                  value=nil,
+                  {onclick: "this.form.submit()",
+                  class: "Menus-checkbox"})
+              %>
+            <% end %>
+            <p class="Menus-display"><%= menu.name %></p>
+            <a class="Menu-delete ">
+              <%= form_with(url: "/menus/#{menu.id}" , method: "delete") do %>
+                <%= image_submit_tag("trash.svg") %>
+              <% end %>
+            </a>
+          </div>
+        </li>
+   <% end %>
+  </ul>

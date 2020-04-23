@@ -4,11 +4,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :orders
-
-  get "/menus" => "menus#new", as: :menus
+  resources :menus
 
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
   delete "/signout" => "sessions#destroy", as: :destroy_session
-  get "/home" => "users#home", as: :new_users_home
+  get "/home" => "menu_items#home", as: :new_menu_items_home
 end

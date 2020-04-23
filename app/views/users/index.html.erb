@@ -1,7 +1,24 @@
+ <div class="Navigation">
+          <%= link_to "Home", new_menu_items_home_path%>
+          <%= link_to "Orders", orders_path%>
+          <%= link_to "Menus", menus_path%>
+          <%= link_to "Users", users_path%>
+        </div>
 <h2>Users<h2>
 <ul>
   <% User.clerk.each do |clerk| %>
-    <li class="Clerk">
-      <p><%=clerk.name%></p>
+    <li class="User">
+      <div class="User-container">
+        <p class = "User-name"><%=clerk.name%></p>
+        <a class="User-delete ">
+                <%= form_with(url: "/users/#{clerk.id}" , method: "delete") do %>
+                  <%= image_submit_tag("trash.svg") %>
+                <% end %>
+        </a>
+      </div>
+    </li>
   <% end %>
 </ul>
+<div class="Users">
+<h3>Add User:<%= link_to "Add-User", new_user_path%></h3>
+</div>

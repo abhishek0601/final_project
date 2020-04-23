@@ -62,3 +62,49 @@ body {
 .Menus-select select option {
   padding: 30px;
 }
+
+.Menus-view{
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgb(33, 46, 56);
+  margin-left: 20px;
+}
+
+.Menus-container{
+  display: inline-flex;
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.Menus-checkbox{
+  line-height: 1.2;
+  color: black;
+  margin-left: 20px;
+  margin-right: 8px;
+  transform: scale(1.5);
+}
+
+ul{
+  list-style: none;
+  margin: 0 auto;
+}
+
+.Menus-container{
+  display: inline-flex;
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.Menu-delete{
+  visibility: hidden;
+  margin-left: 8px;
+}
+
+.Menus-container:hover .Menu-delete{
+  visibility: visible;
+}
+
+.Menus-Display{
+  font-size: 20px;
+  color: rgb(75, 66, 66);
+}

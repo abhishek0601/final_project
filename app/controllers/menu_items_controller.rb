@@ -1,4 +1,6 @@
 class MenuItemsController < ApplicationController
+  before_action :ensure_user_logged_in
+
   def index
   end
 
@@ -16,5 +18,9 @@ class MenuItemsController < ApplicationController
     menu_item = MenuItem.find(menu_item_id)
     menu_item.destroy
     redirect_to menus_path
+  end
+
+  def home
+    render "home"
   end
 end
